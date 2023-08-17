@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.3/dist/css/postboot.min.css"/>
+    <script src="https://kit.fontawesome.com/185c19c7d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-center"> <img src="https://i.pinimg.com/originals/00/69/97/00699757b78e3f083cb7c8249bc735ae.jpg" height="100" widith="50">Captivate Interiors</h1>
+    </header>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/About">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Shop">Shop</a>
+            </li>
+          </ul>
+        </div>
+  </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">About Us</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <img id="CEOimg" class="img-fluid" src="https://www.bing.com/th?u=https%3a%2f%2ftse1.mm.bing.net%2fth%3fid%3dOIP.keyi2XeTp3_k0OSsksJoNgHaLH&ehk=sDhQoAgnW9layBEFKsyaHhNRFRvpi5eUvVor%2f9A0t70%3d&w=124&h=168&c=7&o=6&dpr=1.25&pid=AppEx" widith="800" height="500">
+            </div>
+            <div class="col-sm-8">    
+              <h3 id="CEO_HD">CEO 
+                </h3><p id="CEO_DES">Being the CEO of this company is no easy task, and we are very lucky to have a strong, smart, and independent person like Michael to be our CEO</p>
+                <button id="CEO_BTN" class="btn btn-primary" type="button" onclick="changeMD()">MD</button>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black text-center py-5 mt-5">
+      <div class="container">
+          <h1 class="text-light">Meet the Team</h1>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://pja.co.uk/wp-content/uploads/2018/09/Daniel-Bowditch-1.jpg" height="300" widith="200">
+        </div>
+        <div class="col-sm-8">
+          
+          <h3>Engineer</h3>
+          <p>Saul Midmin is the head engineer, and hes going to make it so all buildings are as functional as they can be no matter the complexity.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://pja.co.uk/wp-content/uploads/2021/02/Shanon-Connolly.jpg" height="300" widith="200">
+        </div>
+        <div class="col-sm-8">
+          
+          <h3>Carpenter</h3>
+          <p>Carpenting is a difficult task, luckily Lucy Brice is here to help and she makes the Carpenting a piece of cake</p>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://pja.co.uk/wp-content/uploads/2018/09/Andrea-Nelmes_.jpg" height="300" widith="200">
+        </div>
+        <div class="col-sm-8">
+          <h3>HR Manager</h3>
+          <p>If anything is looked as suspicious from the company Elise Sear will look into it and try to fix it as best as possible</p>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://pja.co.uk/wp-content/uploads/2020/01/Atish-Chitrakar_.jpg" height="300" widith="200">
+        </div>
+        <div class="col-sm-8">
+          
+          <h3>Staff Manager</h3>
+          <p>Mitch Wright keeps everything under control managing staff, however he is far from a supreme overlord and still is fairly easy going</p>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://pja.co.uk/wp-content/uploads/2022/01/Lucy-Briggs.jpg" height="300" widith="200">
+        </div>
+        <div class="col-sm-8">
+          
+          <h3>Architect</h3>
+          <p>When having to deal with sturdy designs, Judy Commons is here and shes easily going to design each building as best as they can be</p>
+        </div>
+      </div>
+    </div>
+    <script>
+
+      function changeMD()
+      {
+         /* Find all the elements*/
+
+         var CEO_heading = document.getElementById('CEO_HD');
+         var CEO_des = document.getElementById('CEO_DES');
+         var CEO_img = document.getElementById('CEOimg');
+         var CEO_btn = document.getElementById('CEO_BTN');
+
+
+         if(CEO_heading.textContent == "CEO")
+         {
+              CEO_heading.innerHTML = "MD";
+              CEO_des.innerHTML = "Another person of great importance is the Head of Management of this company, Mike Striclind who helps this company immensely with him controlling the day.";
+             /* CEO_img.src = "https://images.squarespace-cdn.com/content/53b599ebe4b08a2784696956/1482287990797-VY0DDX7AE1UKLY3OZGXV/Headshots-NYC-CEOportrait-027.jpg?format=1000w&content-type=image%2Fjpeg"*/
+              CEO_img.src = "https://th.bing.com/th/id/R.39995d6b0f65bc92188484f1870cf48b?rik=tVfJT5tFLeK9gw&pid=ImgRaw&r=0";
+              CEO_btn.innerHTML = "CEO";
+         }
+         else
+         {
+              CEO_heading.innerHTML = "CEO";
+              CEO_des.innerHTML = "Being the CEO of this company is no easy task, and we are very lucky to have a strong, smart, and independent person like Michael to be our CEO";
+              CEO_img.src = "https://www.bing.com/th?u=https%3a%2f%2ftse1.mm.bing.net%2fth%3fid%3dOIP.keyi2XeTp3_k0OSsksJoNgHaLH&ehk=sDhQoAgnW9layBEFKsyaHhNRFRvpi5eUvVor%2f9A0t70%3d&w=124&h=168&c=7&o=6&dpr=1.25&pid=AppEx";
+              CEO_btn.innerHTML = "MD"
+         }
+      }
+
+  </script>
+  <script src="script.js"></script>
+  <footer class="bg-dark text-center text-white fixed-bottom">
+    
+    <div class="container p-4">
+      <section>
+        <a class="btn-outline-light" href="https://www.facebook.com/" role="button">
+          <i class=""><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-128.png" widith="100" height="30"></i>
+        </a>
+        <a class="btn-outline-light" href="https://twitter.com/?lang=en-nz" role="button">
+        <i class=""><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-128.png" widith="100" height="30"></i>
+        </a>
+         <a class="btn-outline-light" href="https://www.linkedin.com/home" role="button">
+          <i class=""><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-128.png" widith="100" height="30"></i>
+        </a>
+          <a class="btn-outline-light" href="https://www.instagram.com/" role="button">
+          <i class=""><img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-128.png" Widith="100" height="30"></i>
+        </a>  
+      </section>
+    </div>  
+  </footer>    
+    <script>
+</script>
+</body>
+</html>
